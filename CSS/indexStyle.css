@@ -1,0 +1,365 @@
+*{
+    font-family: verdana;
+}
+.contenedor{
+    display: grid;
+    grid-template-areas:
+    'hd hd hd hd hd hd'
+    'nv nv nv nv nv nv'
+    'tl tl tl tl rs rs'
+    'at at at at at at'
+    'mi mi lg lg vs vs'
+    'ft ft ft ft ft ft'
+    ;
+}
+
+@media (min-width: 800px){
+    .contenedor{
+        width: 100%;
+    }
+
+    /*ENCABEZADO*/
+    header{
+        grid-area: hd;
+        padding: 10px 5px 5px 5px;
+    }
+
+    header>img:first-child{
+        width: 200px;
+        float: left;
+    }
+
+    header>img:last-child{
+        width: 100px;
+        float: right;
+    }
+    /*FIN ENCABEZADO*/
+
+    /*BARRA DE NAVEGACIÓN*/
+    nav{
+        grid-area: nv;
+        background-color: darkred;
+    }
+
+    nav>input,label{
+        display: none;
+    }
+
+    nav>ul{
+        list-style-type: none;
+        margin: 0%;
+        padding: 0;
+    }
+
+    nav>ul>li{
+        float: left;
+    }
+
+    nav>ul>li>a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        padding: 20px;
+    }
+
+    nav>ul>li>a:hover{
+        background-color: white;
+        color: darkred;
+    }
+    /*FIN BARRA DE NAVEGACIÓN*/
+    /*TITULO*/
+    h1{
+        grid-area: tl;
+        display: inline-block;
+        margin-left: 25px;
+        margin-bottom: 0px;
+        font-weight: lighter;
+        color: darkred;
+    }
+    /*FIN TITULO*/
+
+    /*REDES SOCIALES*/
+    aside{
+        grid-area: rs;
+        column-gap: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    aside>a>img{
+        display: block;
+        width: 30px;
+        margin: 0px;
+    }
+
+    aside>a{
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 100px;
+    }
+    /*FIN REDES SOCIALES*/
+
+    /*RESEÑA HISTORICA*/
+    article{
+        grid-area: at;
+    }
+    article>p{
+        border: 1px solid black;
+        border-radius: 50px;
+        margin: 30px;
+        padding: 30px;
+        text-align: justify;
+    }
+    /*FIN RESEÑA HISTORICA*/
+
+    /*TITULOS MISION VISION*/
+    fieldset{
+        border: 3px solid black;
+        padding: 0%;
+    }
+
+    legend{
+        padding-left: 20px;
+        padding-right: 20px;
+        font-weight: bolder;
+        text-align: center;
+    }
+    /*FIN TITULOS MISION VISION*/
+
+    /*MISION*/
+    .mision{
+        grid-area: mi;
+        margin-left: 30px;
+    }
+    .mi{
+        margin: 7.58%;
+        font-size: small;
+        text-align: justify;
+    }
+    /*FIN MISION*/
+
+    /*IMAGOTIPO*/
+    .logo{
+        grid-area: lg;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*FIN IMAGOTIPO*/
+
+    /*VISION*/
+    .vision{
+        grid-area: vs;
+    }
+    .vs{
+        margin: 4.6%;
+        font-size: small;
+        text-align: justify;
+    }
+    /*FIN VISION*/
+
+    /*PIE DE PAGINA*/
+    footer{
+        grid-area: ft;
+        padding: 2%;
+        background-color: darkred;
+        color: white;
+        text-align: center;
+    }
+    /*PIE DE PAGINA*/
+}
+
+/*PANTALLA PEQUEÑA*/
+
+@media (max-width: 800px){
+    .contenedor{
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+        'hd'
+        'nv'
+        'rs'
+        'tl'
+        'at'
+        'lg'
+        'mi'
+        'vs'
+        'ft'        
+        ;
+    }
+
+
+    /*ENCABEZADO*/
+    header{
+        grid-area: hd;
+        padding: 10px 5px 5px 5px;
+    }
+
+    header>img:first-child{
+        width: 200px;
+        float: left;
+    }
+
+    header>img:last-child{
+        width: 100px;
+        float: right;
+    }
+    /*FIN ENCABEZADO*/
+
+    /*BARRA DE NAVEGACIÓN*/
+    nav{
+        grid-area: nv;
+        background-color: darkred;
+    }
+
+    ul, input{
+        display: none;
+    }
+
+    input:checked ~ul{
+        display: block;
+    }
+
+    label{
+        display: flex;
+        justify-content: right;
+        user-select: none;
+        padding: 10px;
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+
+    li{
+        display: block;
+        background-color: white;
+        color: darkred;
+        margin: 0;
+        padding: auto;
+    }
+
+    nav>ul>li>a{
+        display: block;
+        margin: auto;
+        text-decoration: none;
+        padding: 10px;
+        border: 2px solid darkred;
+        text-align: center;
+        color: darkred;
+        font-weight: bolder;
+    }
+
+    /*FIN BARRA DE NAVEGACIÓN*/
+    /*TITULO*/
+    h1{
+        grid-area: tl;
+        display: inline-block;
+        margin-left: 25px;
+        margin-bottom: 0px;
+        font-weight: lighter;
+        text-align: center;
+        color: darkred;
+    }
+    /*FIN TITULO*/
+
+    /*REDES SOCIALES*/
+    aside{
+        grid-area: rs;
+        column-gap: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3%;
+        padding: 0;
+    }
+
+    aside>a>img{
+        display: block;
+        width: 30px;
+        margin: 0px;
+    }
+
+    aside>a{
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 100px;
+    }
+    /*FIN REDES SOCIALES*/
+
+    /*RESEÑA HISTORICA*/
+    article{
+        grid-area: at;
+    }
+    article>p{
+        border: 1px solid black;
+        border-radius: 50px;
+        margin: 30px;
+        padding: 30px;
+        text-align: justify;
+    }
+    /*FIN RESEÑA HISTORICA*/
+
+    /*TITULOS MISION VISION*/
+    fieldset{
+        border: 3px solid black;
+        padding: 0%;
+    }
+
+    legend{
+        padding-left: 20px;
+        padding-right: 20px;
+        font-weight: bolder;
+        text-align: center;
+    }
+    /*FIN TITULOS MISION VISION*/
+
+    /*MISION*/
+    .mision{
+        grid-area: mi;
+    }
+    .mi{
+        margin: 7.58%;
+        font-size: small;
+        text-align: justify;
+    }
+    /*FIN MISION*/
+
+    /*IMAGOTIPO*/
+    .logo{
+        grid-area: lg;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*FIN IMAGOTIPO*/
+
+    /*VISION*/
+    .vision{
+        grid-area: vs;
+    }
+    .vs{
+        margin: 4.6%;
+        font-size: small;
+        text-align: justify;
+    }
+    /*FIN VISION*/
+
+    /*PIE DE PAGINA*/
+    footer{
+        grid-area: ft;
+        padding: 2%;
+        background-color: darkred;
+        color: white;
+        text-align: center;
+    }
+    /*PIE DE PAGINA*/
+}
+
+/*FIN PANTALLA PEQUEÑA*/
+
